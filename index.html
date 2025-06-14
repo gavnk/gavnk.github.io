@@ -28,50 +28,46 @@
             color: #fff;
             padding: 10px 20px;
             text-align: center;
-           
         }
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
         }
-
         nav ul li {
-            display: inline;
-            margin-right: 10px;
+            margin: 5px 10px; /* Adjusted margin for better spacing */
         }
-
-
-        .home-button ,.about-button,.github-button,.youtube-button {
+        .home-button, .about-button, .github-button, .youtube-button {
             background-color: #f8f8f8;
             color: #333;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 8px 15px; /* Slightly reduced padding for mobile */
             border: 1px solid #ccc;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            display: inline-block; /* Ensures buttons are treated as inline-block elements */
+            text-align: center;
+            min-width: 80px; /* Ensures buttons don't shrink too much */
         }
-
-        .home-button:hover, .nav-button:focus {
+        .home-button:hover, .about-button:hover, .github-button:hover, .youtube-button:hover {
             background-color: #101010;
             color: #eeeeee;
             border-color: #bbb;
         }
-        .youtube-button:hover{
+        .youtube-button:hover {
             background-color: #f10c0c;
             color: #ffffff;
-            border-color: #bbb;
         }
-        .about-button:hover{
+        .about-button:hover {
             background-color: #fbf300;
             color: #eeeeee;
-            border-color: #bbb;
         }
-        .github-button:hover{
+        .github-button:hover {
             background-color: #09aaaa;
             color: #eeeeee;
-            border-color: #bbb;
         }
-     
         .container {
             width: 60%;
             margin: 0 auto; /* Centers the container */
@@ -90,7 +86,6 @@
         }
         .video-container {
             margin: 0 auto; /* Centers the container */
-          
             width: 100%;
         }
         .color-overlay {
@@ -121,11 +116,7 @@
         }
         .project {
             margin-bottom: 15px;
-          /*  max-width: 50%;  Sets the maximum width of the project description */
-          /*  margin-left: auto;  Centers the project block horizontally 
-          /*  margin-right: auto;*/
-          padding: 10px;
-          
+            padding: 10px;
         }
         .project h3 {
             color: #555;
@@ -138,7 +129,6 @@
         }
         iframe {
             width: 90%;
-          /*  height: 500px;  Standard YouTube video aspect ratio */
             aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
             border: none;
             display: block;
@@ -153,7 +143,7 @@
             margin: auto;
             background-color: #fff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            max-width: 80%; 
+            max-width: 80%;
             transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for color and shadow */
         }
         .github-card:hover {
@@ -166,7 +156,6 @@
             display: flex;
             flex-direction: column;
             justify-content: center; /* Align text content to the bottom */
-            
         }
         .github-stats {
             display: flex;
@@ -185,10 +174,8 @@
             height: 30px;
             width: 30px;
             margin-right: 5px;
-           
-        
         }
-        .github-img{
+        .github-img {
             height: 30px;
             width: 30px;
             margin-right: 5px;
@@ -197,288 +184,221 @@
             text-decoration: none;
             color: #333;
         }
-        .Project-TC{
+        .Project-TC {
             width: 90%;
             height: auto;
             border-radius: 8px; /* Optional: rounds the corners of the image */
-
         }
-        .Project-Slambot{
+        .Project-Slambot {
             width: 90%;
             height: auto;
             border-radius: 8px; /* Optional: rounds the corners of the image */
-
         }
-          /* Media Queries */
-        /* big tablet to 1300px (widths smaller than the 1140px row)       */
-        @media only screen and (max-width: 1200px){
+        /* Media Queries */
+        /* big tablet to 1300px (widths smaller than the 1140px row) */
+        @media only screen and (max-width: 1200px) {
             iframe {
-            width: 95%;
-          /*  height: 500px;  Standard YouTube video aspect ratio */
-            aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
-            border: none;
-            display: block;
-            margin: auto; /* Centers the iframe */
-           }
+                width: 95%;
+                aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
+                border: none;
+                display: block;
+                margin: auto; /* Centers the iframe */
+            }
         }
-          /* small tablet to big tablet from 768px to 1023px */
-        @media only screen and (max-width: 1023px){
+        /* small tablet to big tablet from 768px to 1023px */
+        @media only screen and (max-width: 1023px) {
             .container {
-            width: 80%; /* More width on smaller screens */
-            padding: 10px;
-
-           }
-           iframe {
-            width: 95%;
-          /*  height: 500px;  Standard YouTube video aspect ratio */
-            aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
-            border: none;
-            display: block;
-            margin: auto; /* Centers the iframe */
+                width: 80%; /* More width on smaller screens */
+                padding: 10px;
+            }
+            iframe {
+                width: 95%;
+                aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
+                border: none;
+                display: block;
+                margin: auto; /* Centers the iframe */
+            }
         }
-        }
-        /* small phones to small tablets 481px to 767px*/
+        /* small phones to small tablets 481px to 768px */
         @media only screen and (max-width: 768px) {
-        .container {
-            width: 95%; /* More width on smaller screens */
-            padding: 10px;
+            .container {
+                width: 95%; /* More width on smaller screens */
+                padding: 10px;
+            }
+            header, section {
+                padding: 5px 10px;
+            }
+            .about-me {
+                flex-direction: column; /* Stacks children vertically */
+            }
+            .about-image img {
+                width: 50%;
+                height: auto;
+                border-radius: 8px; /* Optional: rounds the corners of the image */
+            }
+            .github-card {
+                height: 50px;
+                width: 500px;
+            }
+            .github-info {
+                height: 50px;
+                width: 400px;
+                margin: auto; /* Centers the iframe */
+            }
+            .github-logo {
+                height: 30px; /* Adjust size as necessary */
+                width: 30px; /* Keep the logo square */
+                margin-right: 10px; /* Space between logo and text */
+            }
+            .about-text, .about-image, .project {
+                flex: 1 1 auto; /* Takes full width on small screens */
+            }
+            iframe {
+                width: 95%;
+                aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
+                border: none;
+                display: block;
+                margin: auto; /* Centers the iframe */
+            }
+            nav ul {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                align-items: center; /* Center buttons horizontally */
+            }
+            nav ul li {
+                margin: 8px 0; /* Vertical spacing between buttons */
+            }
+            .home-button, .about-button, .github-button, .youtube-button {
+                width: 90%; /* Buttons take most of the container width */
+                padding: 10px; /* Consistent padding */
+                font-size: 16px; /* Ensure readable font size */
+            }
         }
-        header, section {
-            padding: 5px 10px;
-        }
-        .about-me {
-            flex-direction: column; /* Stacks children vertically */
-           
-        }
-        .about-image img {
-            width: 50%;
-            height: auto;
-            border-radius: 8px; /* Optional: rounds the corners of the image */
-        }
-        .github-card {
-            height: 50px;
-            width: 500px;
-        }
-        .github-info{
-            height: 50px;
-            width: 400px;
-            margin: auto; /* Centers the iframe */
-
-        }
-
-        .github-logo {
-            height: 30px; /* Adjust size as necessary */
-            width: 30px; /* Keep the logo square */
-            margin-right: 10px; /* Space between logo and text */
-        }
-
-        .about-text, .about-image, .project {
-            flex: 1 1 auto; /* Takes full width on small screens */
-        }
-        iframe {
-            width: 95%;
-          /*  height: 500px;  Standard YouTube video aspect ratio */
-            aspect-ratio: 16 / 9; /* maintains a 16:9 aspect ratio */
-            border: none;
-            display: block;
-            margin: auto; /* Centers the iframe */
-        }
-        
-        }
-
-
-
-
     </style>
 </head>
 <body>
-
-  
     <header>
         <h1>Gavin Kenny's Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="home-button">Home</a></li>
-                    <li><a href="about.html" class="about-button">About</a></li>
-                    <li><a href="https://github.com/gavnk" class="github-button">Github</a></li>
-                    <li><a href="https://www.youtube.com/@gavinkenny369" class="youtube-button">YouTube</a></li>
-                </ul>
-            </nav>
-  
+        <nav>
+            <ul>
+                <li><a href="index.html" class="home-button">Home</a></li>
+                <li><a href="about.html" class="about-button">About</a></li>
+                <li><a href="https://github.com/gavnk" class="github-button">Github</a></li>
+                <li><a href="https://www.youtube.com/@gavinkenny369" class="youtube-button">YouTube</a></li>
+            </ul>
+        </nav>
     </header>
     <div class="container">  
         <section>
             <h3>Welcome to my portfolio. Please see my projects below.</h3>
-<!--             <div class="video-container">
-               
-                <video autoplay loop muted width="100%" height="auto" >
-                    <source src="resources/videos/automate.mp4" type="video/mp4">
-                </video>
-            </div> -->
-           
-            
         </section>   
-         <!-- 
-    <section>
-        <h2>Welcome</h2>
-       
-        <div class="about-me">
-            <div class="about-image">
-                <img src="resources/Images/resume_photo.png" alt="Gavin Kenny">
+        <section>
+            <div class="project">
+                <h3>Coming Soon...</h3>
+                <img class="Project-Slambot" src="resources/Images/slambot.jpg" alt="slam bot">
             </div>
-            <div class="about-text">
-                <h3>Welcome to my portfolio. Please see my projects below.</h3>
-
-            </div>
-        </div>
-    </section>
-    -->
-    <section>
-        <div class="project">
-            <h3>Coming Soon...</h3>
-            
-            <img class="Project-Slambot" src="resources/Images/slambot.jpg" alt="slam bot">
-                
-        </div>
-
-        
-        <h2>University Projects</h2>
-
-        <!-- Project 1 -->
-        <div class="project">
-            
-        
-            <h3>FYP Collaborative Dual Arm System - ROS</h3>
-              <!-- GitHub Project Card -->
-              <a href="https://github.com/gavnk/Project-IV-FYP-Collaborative-Tasks-of-a-Dual-Arm-System">
-            
-                <div class="github-card">
-                    <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
-                    <div class="github-info">
-                        <strong>Github - Collaborative Dual Arm System</strong>
-        
+            <h2>University Projects</h2>
+            <!-- Project 1 -->
+            <div class="project">
+                <h3>FYP Collaborative Dual Arm System - ROS</h3>
+                <!-- GitHub Project Card -->
+                <a href="https://github.com/gavnk/Project-IV-FYP-Collaborative-Tasks-of-a-Dual-Arm-System">
+                    <div class="github-card">
+                        <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
+                        <div class="github-info">
+                            <strong>Github - Collaborative Dual Arm System</strong>
+                        </div>
                     </div>
-
-                </div>
                 </a>
-            <p>Implementation of collaborative/cooperative tasks using a dual arm setup in ROS/MoveIt with two OpenManipulator-X robotic arms and D435i RealSense cameras. Development in C++, Python, Linux and ROS/MoveIt for motion planning and perception.</p>
-          
+                <p>Implementation of collaborative/cooperative tasks using a dual arm setup in ROS/MoveIt with two OpenManipulator-X robotic arms and D435i RealSense cameras. Development in C++, Python, Linux and ROS/MoveIt for motion planning and perception.</p>
                 <!-- YouTube Video Embed -->
                 <iframe src="https://youtube.com/embed/oqYvFJSJV-U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-   
-        <!-- Project 2 -->
-        <div class="project">
-            <h3>UR5 Pick & Place ROS1</h3>
-           
-
-            
-              <!-- GitHub Project Card -->
-            <a href="https://github.com/gavnk/UR5-Pick-And-Place-ROS1">
-                <div class="github-card">  
-                    <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
-                    <div class="github-info">
-                        <strong>Github - UR5-Pick-And-Place-ROS1</strong>
+            </div>
+            <!-- Project 2 -->
+            <div class="project">
+                <h3>UR5 Pick & Place ROS1</h3>
+                <!-- GitHub Project Card -->
+                <a href="https://github.com/gavnk/UR5-Pick-And-Place-ROS1">
+                    <div class="github-card">  
+                        <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
+                        <div class="github-info">
+                            <strong>Github - UR5-Pick-And-Place-ROS1</strong>
+                        </div>
                     </div>
-                </div>
-            </a>
-            <p>This project was an assignment in one of my robotics modules.</p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/G-Pa5GUmcW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-            
-            <h3>EMG Controled Robotic Hand</h3>
-            <p>I completed this project during my Internship at Micochip Technology.</p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/LZrbISjpR0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-            <h3>Raspberry Pi - Computer Vision - Object Recognition</h3>
-            <a href="https://github.com/gavnk/Project-II-Raspberry-Pi-Object-Recognition-YOLO-COCO">
-         
-                <div class="github-card">
-                    <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
-                    <div class="github-info">
-                        <strong>Github - Raspberry Pi Object Recognition</strong>
-        
-                    </div>
-                    
-         
-                  </div>
                 </a>
-            <p>This was my second year project, the task was to use a Raspberry Pi, a Neural Comute Stick 2, a webcam and computer vision to detect and recognise recyclable objects.
-                While the project was successful at recognition, the project used YOLOv3 and COCO dataset which wasn't great with deformed objects.
-            A model which was solely trained on trash and recyclable objects would have worked a lot better, but due to time (and knowledge) this was not possible at the time.
-        However this project demonstrated the use of a hardware accelerator to boost the video capabilities of the Raspberry Pi to perform computer vision</p> 
-            </p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/O4zgybTjBsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-              <!-- GitHub Project Card -->
-       
-            <h3>A Ball on a Beam Robotic System</h3>
-            <a href="https://github.com/gavnk/Project-I-Ball-And-Beam-Control">
-         
-                <div class="github-card">
-                    <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
-                    <div class="github-info">
-                        <strong>Github - Ball & Beam Control System</strong>
-        
+                <p>This project was an assignment in one of my robotics modules.</p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/G-Pa5GUmcW0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <h3>EMG Controled Robotic Hand</h3>
+                <p>I completed this project during my Internship at Micochip Technology.</p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/LZrbISjpR0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <h3>Raspberry Pi - Computer Vision - Object Recognition</h3>
+                <a href="https://github.com/gavnk/Project-II-Raspberry-Pi-Object-Recognition-YOLO-COCO">
+                    <div class="github-card">
+                        <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
+                        <div class="github-info">
+                            <strong>Github - Raspberry Pi Object Recognition</strong>
+                        </div>
                     </div>
-                    
-         
-                  </div>
                 </a>
-            <p>This was my first year project and received an A. A working physical prototype was contructed to balanace a ball on a beam. This demostrated the control theory such as PID controllers in a real application.
-                This was a "group" project, but I ended up doing mostly everything.
-            </p> 
-            </p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/gfOChWXEgq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <h2>Hobbie Projects</h2>
-        <div class="project">
-            <h3>Differential wheeled robot (MicroMouse) </h3>
-            <a href="https://github.com/gavnk/Hobbie-Project-4-MicroMouse">
-         
-                <div class="github-card">
-                    <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
-                    <div class="github-info">
-                        <strong>Github - MicroMouse</strong>
-        
+                <p>This was my second year project, the task was to use a Raspberry Pi, a Neural Compute Stick 2, a webcam and computer vision to detect and recognise recyclable objects.
+                    While the project was successful at recognition, the project used YOLOv3 and COCO dataset which wasn't great with deformed objects.
+                    A model which was solely trained on trash and recyclable objects would have worked a lot better, but due to time (and knowledge) this was not possible at the time.
+                    However this project demonstrated the use of a hardware accelerator to boost the video capabilities of the Raspberry Pi to perform computer vision</p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/O4zgybTjBsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <!-- GitHub Project Card -->
+                <h3>A Ball on a Beam Robotic System</h3>
+                <a href="https://github.com/gavnk/Project-I-Ball-And-Beam-Control">
+                    <div class="github-card">
+                        <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
+                        <div class="github-info">
+                            <strong>Github - Ball & Beam Control System</strong>
+                        </div>
                     </div>
-                    
-         
-                  </div>
-            </a>
-            <p>This is something I worked on over a summer. I applied my skills in embedded systems and electronics to create it.  </p> 
-            </p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/A6lPKOm4Bpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-            <h3>Robovie Nano </h3>
-            <p>I bought this small guy to learn more about humanoid/bipedal robots.   </p> 
-            </p>
-             <!-- YouTube Video Embed -->
-             <iframe src="https://youtube.com/embed/aZwAYSnErtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="project">
-            <h3>Thermal Camera with AMG8833 sensor</h3>
-            <p>Using an AMG8833 sensor by panasonic, and a Raspberry Pi to make a thermal camera</p> 
-            <img class="Project-TC" src="resources/Images/thermal_camera.jpg" alt="Thermal Camera">
-                
-        </div>
-
-
-        <!-- More projects can be added here -->
-    </section>
-
-    <footer style="text-align:center; padding:10px 0; background:#222; color:#fff;">
-        <p>Contact me at <a href="mailto:gvnknny@gmail.com" style="color:#ffffff;">gvnknny@gmail.com</a></p>
-    </footer>
-</div>
+                </a>
+                <p>This was my first year project and received an A. A working physical prototype was constructed to balance a ball on a beam. This demonstrated the control theory such as PID controllers in a real application.
+                    This was a "group" project, but I ended up doing mostly everything.
+                </p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/gfOChWXEgq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <h2>Hobbie Projects</h2>
+            <div class="project">
+                <h3>Differential wheeled robot (MicroMouse) </h3>
+                <a href="https://github.com/gavnk/Hobbie-Project-4-MicroMouse">
+                    <div class="github-card">
+                        <img class="github-logo" src="resources/Images/github_logo.png" alt="GitHub Logo">
+                        <div class="github-info">
+                            <strong>Github - MicroMouse</strong>
+                        </div>
+                    </div>
+                </a>
+                <p>This is something I worked on over a summer. I applied my skills in embedded systems and electronics to create it. </p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/A6lPKOm4Bpc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <h3>Robovie Nano </h3>
+                <p>I bought this small guy to learn more about humanoid/bipedal robots. </p>
+                <!-- YouTube Video Embed -->
+                <iframe src="https://youtube.com/embed/aZwAYSnErtQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="project">
+                <h3>Thermal Camera with AMG8833 sensor</h3>
+                <p>Using an AMG8833 sensor by panasonic, and a Raspberry Pi to make a thermal camera</p>
+                <img class="Project-TC" src="resources/Images/thermal_camera.jpg" alt="Thermal Camera">
+            </div>
+        </section>
+        <footer style="text-align:center; padding:10px 0; background:#222; color:#fff;">
+            <p>Contact me at <a href="mailto:gvnknny@gmail.com" style="color:#ffffff;">gvnknny@gmail.com</a></p>
+        </footer>
+    </div>
 </body>
 </html>
