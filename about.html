@@ -10,8 +10,6 @@
     
       gtag('config', 'G-CMGB1TZ49B');
     </script>
-
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Gavin Kenny</title>
@@ -36,35 +34,44 @@
             padding: 10px 20px;
             text-align: center;
         }
-        .home-button ,.about-button,.github-button,.youtube-button {
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+        }
+        nav ul li {
+            margin: 5px 10px; /* Adjusted margin for better spacing */
+        }
+        .home-button, .about-button, .github-button, .youtube-button {
             background-color: #f8f8f8;
             color: #333;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 8px 15px; /* Slightly reduced padding for mobile */
             border: 1px solid #ccc;
             border-radius: 5px;
             transition: background-color 0.3s, color 0.3s;
+            display: inline-block; /* Ensures buttons are treated as inline-block elements */
+            text-align: center;
+            min-width: 80px; /* Ensures buttons don't shrink too much */
         }
-
-        .home-button:hover, .nav-button:focus {
+        .home-button:hover, .about-button:hover, .github-button:hover, .youtube-button:hover {
             background-color: #101010;
             color: #eeeeee;
             border-color: #bbb;
         }
-        .youtube-button:hover{
+        .youtube-button:hover {
             background-color: #f10c0c;
             color: #ffffff;
-            border-color: #bbb;
         }
-        .about-button:hover{
+        .about-button:hover {
             background-color: #fbf300;
             color: #eeeeee;
-            border-color: #bbb;
         }
-        .github-button:hover{
+        .github-button:hover {
             background-color: #09aaaa;
             color: #eeeeee;
-            border-color: #bbb;
         }
         section {
             margin: 20px 0;
@@ -80,31 +87,6 @@
         }
         li {
             margin-bottom: 10px; /* Adds space between list items */
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-
-        .nav-button {
-            background-color: #f8f8f8;
-            color: #333;
-            text-decoration: none;
-            padding: 10px 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .nav-button:hover, .nav-button:focus {
-            background-color: #e8e8e8;
-            color: #000;
-            border-color: #bbb;
         }
         .about-me {
             display: flex;
@@ -123,7 +105,7 @@
             height: auto;
             border-radius: 8px; /* Optional: rounds the corners of the image */
         }
-            @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .container {
                 width: 95%; /* More width on smaller screens */
                 padding: 10px;
@@ -134,7 +116,7 @@
             .about-me, .github-card {
                 flex-direction: column; /* Stacks children vertically */
             }
-            .about-text,  .project, .github-info, .github-stats {
+            .about-text, .project, .github-info, .github-stats {
                 flex: 1 1 auto; /* Takes full width on small screens */
             }
             .about-image img {
@@ -142,88 +124,56 @@
                 height: auto;
                 border-radius: 8px; /* Optional: rounds the corners of the image */
             }
+            nav ul {
+                flex-direction: column; /* Stack buttons vertically on mobile */
+                align-items: center; /* Center buttons horizontally */
+            }
+            nav ul li {
+                margin: 8px 0; /* Vertical spacing between buttons */
+            }
+            .home-button, .about-button, .github-button, .youtube-button {
+                width: 90%; /* Buttons take most of the container width */
+                padding: 10px; /* Consistent padding */
+                font-size: 16px; /* Ensure readable font size */
+            }
         }
-    
-        
     </style>
 </head>
 <body>
-    
-        <header>
-            <h1>About Gavin</h1>
-           
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="home-button">Home</a></li>
-                    <li><a href="about.html" class="about-button">About</a></li>
-                    <li><a href="https://github.com/gavnk" class="github-button">Github</a></li>
-                    <li><a href="https://www.youtube.com/@gavinkenny369" class="github-button">YouTube</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="container">
+    <header>
+        <h1>About Gavin</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="home-button">Home</a></li>
+                <li><a href="about.html" class="about-button">About</a></li>
+                <li><a href="https://github.com/gavnk" class="github-button">Github</a></li>
+                <li><a href="https://www.youtube.com/@gavinkenny369" class="youtube-button">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
         <section>
-            
             <div class="about-me">
                 <div class="about-image">
                     <img src="resources/Images/resume_photo.png" alt="Gavin Kenny">
                     <img src="resources/Images/me.jpg" alt="Gavin Kenny">
                 </div>
                 <div class="about-text">
-                 
-                        
                     <p>Hello. I'm Gavin</p>
-           
                     <p>B.Sc Robotics & Intelligent Devices.</p>
-
                     <p>Robotics is the future, so instead of resisting incoming change I decided to join in!</p>
-
                     <p>I used to be an English Teacher in Japan before making a career change.</p>
-
                     <p>I'm interested in Robotics and automation for its practical uses.</p>
-
-           
-                    
-                    
-                
-                  
-            
-    
                 </div>
             </div>
         </section>
         <section>
-
-         
         </section>
         <section>
-
-
-      
         </section>
-<!--         <section>
-            <h2>Education</h2>
-            <p>I taught myself mathematics to enter university, it took one year to do.</p>
-            
-       
-        </section> -->
-<!--         <section>
-            <h2>Projects</h2>
-            <ul></ul>
-                <li>Collaborative tasks of a dual arm system</li>
-                <li>UR5 Pick & Place</li>
-                <li>Object Recognition with Raspberry Pi</li>
-                <li>Ball & Beam</li>
-                <li>Micromouse</li>
-                <li>Thermal Camera</li>
-            </ul>
-        
-        </section> -->
-       
         <footer style="text-align:center; padding:10px 0; background:#222; color:#fff;">
-            <p>Contact me at gvnknny@gmail.com</p>
+            <p>Contact me at <a href="mailto:gvnknny@gmail.com" style="color:#ffffff;">gvnknny@gmail.com</a></p>
         </footer>
     </div>
-</div>
 </body>
 </html>
