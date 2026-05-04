@@ -12,10 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gavin Kenny's Robotics Portfolio</title>
+    <title>Gavin Kenny | Robotics Portfolio</title>
     <link rel="icon" type="image/png" sizes="16x16" href="resources/Images/gavin_icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #e74c3c;
@@ -45,6 +51,7 @@
             color: var(--text-color);
             line-height: 1.6;
             transition: var(--transition);
+            min-height: 100vh;
         }
 
         header {
@@ -66,8 +73,9 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
         nav {
@@ -120,6 +128,9 @@
             max-width: 1200px;
             margin: 2rem auto;
             padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
         }
 
         .about-container {
@@ -135,6 +146,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid var(--primary-color);
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
         }
 
         .about-content {
@@ -142,14 +154,15 @@
         }
 
         .about-content h1 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         .projects {
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 2rem;
+            padding: 0 2rem 2rem 2rem;
         }
 
         .projects h2 {
@@ -166,9 +179,9 @@
 
         .project-card {
             background: var(--card-bg);
-            border-radius: 10px;
+            border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 16px rgba(44,62,80,0.10);
             transition: var(--transition);
         }
 
@@ -215,6 +228,7 @@
             padding: 4rem 2rem;
             background: var(--primary-color);
             color: white;
+            border-radius: 0 0 12px 12px;
         }
 
         .contact h2 {
@@ -232,10 +246,15 @@
             color: white;
             font-size: 1.5rem;
             transition: var(--transition);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.05);
+            text-decoration: none;
         }
 
         .social-links a:hover {
             color: var(--secondary-color);
+            background: rgba(255,255,255,0.15);
         }
 
         footer {
@@ -243,6 +262,7 @@
             padding: 2rem;
             background: var(--primary-color);
             color: white;
+            border-radius: 0 0 12px 12px;
         }
 
         @media (max-width: 768px) {
@@ -305,11 +325,7 @@
             </div>
             <div class="about-content">
                 <h1>About Me</h1>
-                <p>Hi, I'm Gavin, I'm passionate about robotics. I have always been interested in how things work,
-                    and have a natural ability to fix things and solve problems. Living in Japan made me realise the possibilities of robotics and automation.
-                    So after some time doing other things, I decided to pursue a career in engineering.
-                    I would decribe myself as a pragmatist, although I do enjoy thinking outside the box as long as its based in reality.
-                    I am at my best when I am trusted, given responsibility, and the freedom to explore solutions as a team or individually.
+                <p>Hi, I'm Gavin, I'm passionate about robotics. Instead of resisting incoming change I decided to join in!.
                     Please see my projects below.</p>
             </div>
         </div>
@@ -329,18 +345,18 @@
 
 
             <div class="project-card">
-                <img src="resources/Images/slambot.png" alt="Project 2">
+                <img src="resources/Images/slambot.jpg" alt="Project 2">
                 <div class="project-card-content">
                     <h3>Slambot</h3>
-                    <p>ROS2, Docker, Raspberry Pi, Encoders/IMU, RPlidar, SLAM, Nav2</p>
-                    <a href="https://www.youtube.com/watch?v=9VWHdo09qng">View Project</a>
+                    <p>ROS2, Docker, Raspberry Pi, In progress...</p>
+                    <a href="">In Progress</a>
                 </div>
             </div>
             <div class="project-card">
                 <img src="resources/Images/FYP.png" alt="Project 3">
                 <div class="project-card-content">
                     <h3>Final Year Project</h3>
-                    <p>Collaborative Dual Arm Robot with ROS MOVEIT</p>
+                    <p>Collaborative Dual Arm Robot</p>
                     <a href="https://www.youtube.com/watch?v=oqYvFJSJV-U">View Project</a>
                 </div>
             </div>
@@ -348,7 +364,7 @@
                 <img src="resources/Images/ros.png" alt="Project 4">
                 <div class="project-card-content">
                     <h3>ROS UR5 Project</h3>
-                    <p>UR5 Pick & Place in ROS. This was a small project to apply some ROS knowledge.</p>
+                    <p>UR5 Pick & Place in ROS</p>
                     <a href="https://www.youtube.com/watch?v=G-Pa5GUmcW0">View Project</a>
                 </div>
             </div>
@@ -366,7 +382,7 @@
                 <img src="resources/Images/CV.png" alt="Project 6">
                 <div class="project-card-content">
                     <h3>Computer Vision Project</h3>
-                    <p>Running object detection on a Raspberry Pi and Neural Compute Stick.
+                    <p>Running object detection on a Raspberry and Neural Compute Stick.
                         This project uses Yolo Tiny v3 and COCO dataset to detect objects.</p>
                     <a href="https://www.youtube.com/watch?v=O4zgybTjBsM">View Project</a>
                 </div>
@@ -376,7 +392,7 @@
                 <div class="project-card-content">
                     <h3>Robotic Control System</h3>
                     <p>Ball & Beam Robotic Control System using PID control.
-                        This was a first year project in college, I made a working prototype.</p>
+                        This project uses a PID controller to balance a ball on a beam.</p>
                     </p>
                     <a href="https://www.youtube.com/watch?v=gfOChWXEgq4">View Project</a>
                 </div>
@@ -385,8 +401,7 @@
                 <img src="resources/Images/mm.jpg" alt="Project 8">
                 <div class="project-card-content">
                     <h3>Micromouse Project</h3>
-                    <p>I made this simple micromouse following the ukmarsbot materials for the hardware setup, ordering and customising the PCB, buying parts at Akizuki electronic,
-                     soldering everything together, and writing my own algorithms for maze solving.</p>
+                    <p>Simple micromouse with obstacle avoidance.</p>
                     <a href="https://www.youtube.com/watch?v=bk5PXIOYsSI">View Project</a>
                 </div>
             </div>
@@ -395,7 +410,7 @@
                 <div class="project-card-content">
                     <h3>Thermal Camera with Raspberry Pi and a Panasonic AMG8854 </h3>
                     <p>The sensor is 8x8 but with some software it can be adjusted to more using bicubic interpolation.
-                        The project was inspired by adafruit's project found here: 
+                        The project was inpired by adafruit's project found here: 
                         <a href="https://learn.adafruit.com/adafruit-amg8833-8x8-thermal-camera-sensor/raspberry-pi-thermal-camera">Adafruit Project</a>
                     </p>
                     <!--<a href="">View Project</a> --> 
@@ -404,28 +419,32 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" aria-label="Contact">
         <h2>Get in Touch</h2>
         <p>Interested in collaborating or learning more about my projects?</p>
         <div class="social-links">
-            <a href="https://github.com/gavnk" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://www.youtube.com/@gavinkenny369" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="gvnknny@gmail.com"><i class="fas fa-envelope"></i>gvnknny@gmail.com</a>
+            <a href="https://github.com/gavnk" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.youtube.com/@gavinkenny369" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> YouTube</a>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Gavin Kenny. All rights reserved.</p>
+        <p>© 2026 Gavin Kenny. All rights reserved.</p>
     </footer>
 
     <script>
         function toggleTheme() {
             document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', document.body.dataset.theme);
         }
-
         function toggleMenu() {
             document.querySelector('nav ul').classList.toggle('active');
         }
+        // Persist theme
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) document.body.dataset.theme = savedTheme;
+        })();
     </script>
 </body>
 </html>
